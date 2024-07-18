@@ -11,6 +11,7 @@ else:
     print("Username is valid")
 #check password
 spChar = re.compile(r'[{}[\]|/?<>@#$%^&*()_!~:]')
+
 if (len(password) < 8 or
         spChar.search(password) is None or
         not any(char.isdigit() for char in password) or
