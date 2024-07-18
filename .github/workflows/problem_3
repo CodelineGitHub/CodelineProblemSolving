@@ -26,6 +26,7 @@ while True:
             "1234321\n"
             "You can use this pattern to draw a Palindromic Triangle for any number of lines.")
     # Exit the loop 
+
     elif choice == '4':
         print("Exiting the program")
         break
