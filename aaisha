@@ -1,0 +1,3 @@
+def greet(name): 
+return f"Hello, {name}! Welcome to the coding world." 
+# Calling the function with the name "Aisha" print(greet("Aisha"))
