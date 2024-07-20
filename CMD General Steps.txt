@@ -1,0 +1,118 @@
+C:\Users\ftoom97>cd CodelineProblemSolving
+
+C:\Users\ftoom97\CodelineProblemSolving>git checkout -b Fatema-submission
+fatal: a branch named 'Fatema-submission' already exists
+
+C:\Users\ftoom97\CodelineProblemSolving>dir
+ Volume in drive C has no label.
+ Volume Serial Number is B6A2-4FC4
+
+ Directory of C:\Users\ftoom97\CodelineProblemSolving
+
+07/19/2024  09:11 PM    <DIR>          .
+07/19/2024  09:11 PM    <DIR>          ..
+07/19/2024  09:11 PM    <DIR>          .github
+07/19/2024  09:11 PM             2,416 README.md
+07/19/2024  09:11 PM           199,403 recruitment_task_codeline.pdf
+               2 File(s)        201,819 bytes
+               3 Dir(s)  936,186,339,328 bytes free
+
+C:\Users\ftoom97\CodelineProblemSolving>git checkout -b Fatema-submission
+Switched to a new branch 'Fatema-submission'
+
+C:\Users\ftoom97\CodelineProblemSolving>git config --global user.name ftoom97
+
+C:\Users\ftoom97\CodelineProblemSolving>git config --global user.email ftoom1997.20@gmail.com
+
+C:\Users\ftoom97\CodelineProblemSolving>git remote -v
+origin  https://github.com/ftoom97/CodelineProblemSolving.git (fetch)
+origin  https://github.com/ftoom97/CodelineProblemSolving.git (push)
+
+C:\Users\ftoom97\CodelineProblemSolving>git remote add upstream https://github.com/ftoom97/CodelineProblemSolving.git
+
+C:\Users\ftoom97\CodelineProblemSolving>git remote -v
+origin  https://github.com/ftoom97/CodelineProblemSolving.git (fetch)
+origin  https://github.com/ftoom97/CodelineProblemSolving.git (push)
+upstream        https://github.com/ftoom97/CodelineProblemSolving.git (fetch)
+upstream        https://github.com/ftoom97/CodelineProblemSolving.git (push)
+
+C:\Users\ftoom97\CodelineProblemSolving>git fetch upstream
+From https://github.com/ftoom97/CodelineProblemSolving
+ * [new branch]      Fatema_submission -> upstream/Fatema_submission
+ * [new branch]      main              -> upstream/main
+
+C:\Users\ftoom97\CodelineProblemSolving>git checkout
+
+C:\Users\ftoom97\CodelineProblemSolving>git checkout -b Fatema_submission
+Switched to a new branch 'Fatema_submission'
+
+
+C:\Users\ftoom97\CodelineProblemSolving>git config --global credential.helper cache
+
+C:\Users\ftoom97\CodelineProblemSolving>git remote set-url origin https://github.com/ftoom97/CodelineProblemSolving.git
+
+
+C:\Users\ftoom97\CodelineProblemSolving>notepad problem_1.py
+
+C:\Users\ftoom97\CodelineProblemSolving>notepad problem_2.py
+
+C:\Users\ftoom97\CodelineProblemSolving>notepad problem_3.py
+
+C:\Users\ftoom97\CodelineProblemSolving>notepad problem_4.py
+
+C:\Users\ftoom97\CodelineProblemSolving>git add *
+
+C:\Users\ftoom97\CodelineProblemSolving>git commit -m "Added solutions to all problems"
+[Fatema_submission f86ad64] Added solutions to all problems
+ 4 files changed, 94 insertions(+)
+ create mode 100644 problem_1.py
+ create mode 100644 problem_2.py
+ create mode 100644 problem_3.py
+ create mode 100644 problem_4.py
+
+C:\Users\ftoom97\CodelineProblemSolving>git pull origin Fatema_submission
+From https://github.com/ftoom97/CodelineProblemSolving
+ * branch            Fatema_submission -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+C:\Users\ftoom97\CodelineProblemSolving>git push origin Fatema_submission
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.18 KiB | 1.18 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/ftoom97/CodelineProblemSolving.git
+   c685e7e..b6562f3  Fatema_submission -> Fatema_submission
+
+
+C:\Users\ftoom97\CodelineProblemSolving>git push origin Fatema-submission
+fatal: unable to connect to cache daemon: Unknown error
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'Fatema-submission' on GitHub by visiting:
+remote:      https://github.com/ftoom97/CodelineProblemSolving/pull/new/Fatema-submission
+remote:
+To https://github.com/ftoom97/CodelineProblemSolving.git
+ * [new branch]      Fatema-submission -> Fatema-submission
+
+C:\Users\ftoom97\CodelineProblemSolving>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
