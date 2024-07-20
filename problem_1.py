@@ -10,3 +10,4 @@ else:
   print("Username is valid")
 
 
+if len(password)<8 or not (r'[!@
