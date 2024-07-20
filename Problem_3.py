@@ -1,54 +1,47 @@
-def display_right_angled_triangle_ones(size):
-    for i in range(1, size + 1):
-        print('1' * i)
+def display_right_angle_triangle():
+    rows = int(input("Enter the number of rows for the right-angled triangle: "))
+    for i in range(1, rows + 1):
+        print('*' * i)
 
-def display_palindromic_triangle(size):
-    for i in range(1, size + 1):
-        num_str = ''.join(str(j) for j in range(1, i + 1))
-        palindromic_str = num_str + num_str[-2::-1]
-        print(palindromic_str)
+def display_alternating_triangle():
+    rows = int(input("Enter the number of rows for the alternating triangle: "))
+    for i in range(1, rows + 1):
+        if i % 2 == 0:
+            print('+' * i)
+        else:
+            print('*' * i)
 
-def show_help():
+def display_help():
     print("""
-    Welcome to the Interactive Triangle Display Program!
-    Here are the options you can choose:
-    1. Display a right-angle triangle of ones:
-       - You will be asked to enter the number of lines.
-       - The triangle will be displayed with '1' characters.
-    2. Display a Palindromic Triangle:
-       - You will be asked to enter the number of lines.
-       - The triangle will display lines with palindromic numbers.
-    3. Help:
-       - Displays this help information.
-    4. Exit:
-       - Exits the program.
+Menu options:
+1. Display a right-angled triangle
+2. Display an alternating triangle
+3. Help (display menu options)
+4. Exit
     """)
 
 def main():
     while True:
-        print("""
-        Menu:
-        1. Display a right-angle triangle of ones
-        2. Display a Palindromic Triangle
-        3. Help
-        4. Exit
-        """)
+        print("\nMenu:")
+        print("1. Display a right-angled triangle")
+        print("2. Display an alternating triangle")
+        print("3. Help")
+        print("4. Exit")
         
         choice = input("Enter your choice (1-4): ")
         
         if choice == '1':
-            size = int(input("Enter the number of lines: "))
-            display_right_angled_triangle_ones(size)
+            display_right_angle_triangle()
         elif choice == '2':
-            size = int(input("Enter the number of lines: "))
-            display_palindromic_triangle(size)
+            display_alternating_triangle()
         elif choice == '3':
-            show_help()
+            display_help()
         elif choice == '4':
-            print("Exiting the program. Goodbye!")
+            print("Exiting the program...")
             break
         else:
             print("Invalid choice. Please enter a number from 1 to 4.")
 
 if __name__ == "__main__":
     main()
+
