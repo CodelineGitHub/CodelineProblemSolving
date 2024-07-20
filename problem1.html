@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Problem 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .error {
+            color: red;
+            display: block;
+            margin-top: 5px;
+        }
+        .success {
+            color: green;
+            display: block;
+            margin-top: 5px;
+        }
+	
+    </style>
+</head>
+<body>
+<h3>Enter Your Information</h3>
+<form id="LoginForm">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <span id="usernameError" class="error"></span>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span id="passwordError" class="error"></span>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="emailError" class="error"></span>
+        </div>
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+    <div id="formResult" class="success"></div>
+<script>
+        function validateForm() {
+
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('formResult').textContent = '';
+            
+            let isValid = true;
+            let resultMessages = [];
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value;
+
+        
+            if (!username) {
+                document.getElementById('usernameError').textContent = 'Username should not be empty.';
+                isValid = false;
+            } else if (username.length > 50) {
+                document.getElementById('usernameError').textContent = 'Username should not exceed 50 characters.';
+                isValid = false;
+            } else {
+                resultMessages.push('Username is valid.');
+            }
+
+            const specialSymbol = /[!@#$%^&*(),.?":{}|<>]/;
+            const number = /\d/;
+            const lowercase = /[a-z]/;
+            const uppercase = /[A-Z]/;
+            
+            if (password.length < 8) {
+                document.getElementById('passwordError').textContent = 'Password must be at least 8 characters long.';
+                isValid = false;
+            } else if (!specialSymbol.test(password)) {
+                document.getElementById('passwordError').textContent = 'Password should contain at least one special symbol.';
+                isValid = false;
+            } else if (!number.test(password)) {
+                document.getElementById('passwordError').textContent = 'Password should contain at least one number.';
+                isValid = false;
+            } else if (!lowercase.test(password) || !uppercase.test(password)) {
+                document.getElementById('passwordError').textContent = 'Password should contain both uppercase and lowercase characters.';
+                isValid = false;
+            } else {
+                resultMessages.push('Password is valid.');
+            }
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Invalid email address.';
+                isValid = false;
+            } else {
+                resultMessages.push('Email is valid.');
+            }
+
+         
+            if (resultMessages.length > 0) {
+                document.getElementById('formResult').textContent = resultMessages.join(', ');
+            }
+        }
+    </script>
+</body>
+</html>
