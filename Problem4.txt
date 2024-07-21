@@ -1,0 +1,21 @@
+input_string = input("Enter the list of integers: ")
+try:
+    num = [int(i) for i in input_string.split()]
+except ValueError:
+    print("Invalid input. Please enter only integers separated by spaces.")
+    exit()
+
+if not num:
+    print("The list of integers is empty.")
+    exit()
+
+star = int(input("Enter start index: "))
+end = int(input("Enter end index: "))
+
+# Validate indices
+if star < 0 or end > len(num) or star >= end:
+    print("Invalid start or end indices. Ensure indices are within the list range and start < end.")
+else:
+    j = [i ** 2 for i in num if i % 2 == 0]  # Squares of even numbers
+    print("List of squares of even numbers: ", j)
+    print("Sublist: ", num[star:end])
