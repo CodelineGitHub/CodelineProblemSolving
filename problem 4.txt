@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class num
+{
+    public static void main (String args[])
+    {
+        
+        Scanner u=new Scanner (System.in);
+        int num;
+        int i;
+        int m;
+        System.out.println(" Enter the number of numbers you want to enter of integars: ");
+        num=u.nextInt();
+       int[] n=new int[num];
+       System.out.println(" Enter the numbers:  ");
+       for(i=0; i<num; i++)
+       {
+       n[i]=u.nextInt();
+       }
+       for(i=0; i<num; i++){
+       if(n[i] % 2==0){
+       m=n[i] * n[i];
+       System.out.println(" The squer numbers list:   ");
+       
+       for(i=0; i<num; i++){
+       if(n[i] % 2==0){
+       m=n[i] * n[i];
+       System.out.print("    "+m);
+       }
+       }
+       }
+       }
+       
+    
+}
+}

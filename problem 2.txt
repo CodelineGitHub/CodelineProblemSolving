@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Binary
+{
+    public static void main (String args[])
+    {
+        int dec; 
+        
+        int a=2;
+        int i=0;
+        int b;
+        
+        
+        Scanner u=new Scanner (System.in);
+        System.out.println("Enter the decimal number   ");
+        dec=u.nextInt();
+        
+       
+        
+        while (dec>0){
+        b= dec % a;
+        dec= dec/a;
+        i++;
+        System.out.println("    " +b);
+        }
+        
+    
+        
+    }
+}
