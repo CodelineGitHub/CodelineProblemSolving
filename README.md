@@ -8,7 +8,7 @@ To submit your solution for all 4 problems, please follow these steps:
 - Open command prompt and run
   ```bash
   git version
-  ```
+  ```    
 - If you see the version, then git is successfully installed.
 
 ### Step 2: Fork the Repository
