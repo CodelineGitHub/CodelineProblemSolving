@@ -1,0 +1,101 @@
+problem 1: 
+import re
+
+name = input("Username: ")
+password = input("Password: ")
+email = input("Email: ")
+
+# Check username
+if not (name.strip() and len(name) <= 50):
+    print("Username is invalid")
+else:
+    print("Username is valid")
+
+# Check password
+if (
+    len(password) < 8 or
+    re.search(r'[{}[\]\\|/?<>@#$%^&*()_!~:]', password) is None or
+    not any(char.isdigit() for char in password) or
+    not any(char.islower() for char in password) or
+    not any(char.isupper() for char in password)
+):
+    print("Password is invalid")
+else:
+    print("Password is valid")
+
+# Check email
+if re.match(r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,7}$', email):
+    print("Email is valid")
+else:
+    print("Email is invalid")
+
+
+
+
+problem 2:
+num = int(input("Input: "))
+rem = []
+while num != 0 :
+    rem.append(num % 2) # Record remainder of num divided by 2
+    num = num // 2 # Update num to quotient of num divided by 2
+# Join remainders to form binary string (reversed)
+binary = ''.join([str(y) for y in rem[::-1]])
+
+print("Output:", binary)
+
+
+
+problem 3: 
+while True:
+    print("Menu:\n 1. Display a right-angle triangle of ones \n 2. Display a Palindromic Triangle \n 3. Help \n 4. Exit")
+    choice = input("Enter your choice: ")
+    
+    if choice not in ['1', '2', '3', '4']:
+        print("Invalid choice. Please enter a number between 1 and 4.")
+        continue
+    
+    # Display right-angle triangle of ones
+    if choice == '1':
+        rows = int(input("Enter the number of lines: "))
+        for i in range(rows):
+            for j in range(i + 1):
+                print("1", end="")
+            print()
+    
+    # Display Palindromic Triangle
+    elif choice == '2':
+        rows = int(input("Enter the number of lines: "))
+        for i in range(1, rows + 1):
+            print((pow(10, i) // 9) ** 2)
+    
+    # Display help information
+    elif choice == '3':
+        print("Help:\n"
+            "A Palindromic Triangle is a triangular array of numbers where each row forms a palindrome.\n"
+            "The first few lines of a Palindromic Triangle are:\n"
+            "1\n"
+            "11\n"
+            "121\n"
+            "12321\n"
+            "1234321\n"
+            "You can use this pattern to draw a Palindromic Triangle for any number of lines.")
+    
+    # Exit the loop
+    elif choice == '4':
+        print("Exiting the program")
+        break
+
+
+problem 4 :
+input_string = input("Enter the list of integers: ")
+num = [int(i) for i in input_string.split()]
+star= int(input("Enter start index:"))
+end= int(input("Enter end index: "))
+j= []
+#squares of even numbers
+for i in num:
+    if i%2 ==0: #check if number is even
+        j.append(i**2)  #sqaure
+print("List of squares of even numbers: ", j)
+print("Sublist: ", num[star:end])
+
