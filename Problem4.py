@@ -1,7 +1,9 @@
+# Function to generate squares of even numbers
 def generate_even_squares(numbers):
     even_squares = [x**2 for x in numbers if x % 2 == 0]
     return even_squares
 
+# Function to slice the list
 def slice_list(numbers, start, end):
     return numbers[start:end]
 
@@ -13,4 +15,4 @@ even_squares = generate_even_squares(numbers)
 sliced_list = slice_list(numbers, start_index, end_index)
 
 print("Even squares:", even_squares)
-print("Sliced list:", 
+print("Sliced list:", sliced_list)
