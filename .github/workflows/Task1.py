@@ -27,11 +27,11 @@ def validate_email(email):
 
 def main():
     print("User Login Validation")
-    
+
     username = input("Enter Username: ")
     password = input("Enter Password: ")
     email = input("Enter Email: ")
-    
+
     print("\nValidation Results:")
     print(f"Username: {validate_username(username)}")
     print(f"Password: {validate_password(password)}")

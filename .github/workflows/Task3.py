@@ -25,9 +25,9 @@ def main():
         print("2. Display a Palindromic Triangle")
         print("3. Help")
         print("4. Exit")
-        
+
         choice = input("Enter your choice: ")
-        
+
         if choice == '1':
             size = int(input("Enter the size of the triangle: "))
             display_right_angle_triangle(size)
