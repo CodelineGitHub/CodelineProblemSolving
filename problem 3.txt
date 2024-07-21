@@ -1,0 +1,58 @@
+import java.util.Scanner;
+class T
+{
+    public static void main (String args[])
+    {
+        System.out.println("\n 1- Display a right-angle triangle of ones \n 2- display a palindrome Trianle \n 3- Help \n 4- Exit  ");
+        int ch;
+        int i;
+        int num;
+        Scanner u=new Scanner (System.in);
+        System.out.println("Enter your choice:    ");
+        ch=u.nextInt();
+        System.out.println("Enter the number of lines:    ");
+        num=u.nextInt();
+      
+
+
+        if(ch==3){
+        System.out.println("A palindromic Triangle is a triangle array of numbers where each row forms a palindrome");
+        System.out.println("The first few lines of a palindromic Triangle are:");
+        System.out.println("1");
+        System.out.println("11");
+        System.out.println("121");
+        System.out.println("12321");
+        System.out.println("1234321");
+        System.out.println("You can use this pattern to draw a plaindromic Triangle for any number of lines");
+        }
+        if(ch==4){
+        System.out.println("Existing program");
+        }
+    
+      {
+       
+       for (i=0; i<num; i++)
+        if(ch==1)
+        System.out.println("\n 1 \n 1 1 \n 1 1 1 ");
+    
+        else if(ch==2)
+        System.out.println("\n 1 \n 11 \n 121 \n 12321 \n 1234321"); 
+      }
+     
+      for(i=0; i<num+1; i++)
+        if(ch==1)
+        System.out.print("1");
+    
+        else if(ch==2)
+        System.out.print("1 11 121 12321 1234321"); 
+      {
+          
+      }
+        
+        
+        
+                
+        
+     
+    }
+}

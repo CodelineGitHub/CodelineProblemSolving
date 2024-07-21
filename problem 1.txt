@@ -1,0 +1,47 @@
+import java.util.Scanner;
+class Email
+{
+    public static void main (String args[])
+    {
+        String user;
+        Scanner u=new Scanner (System.in);
+        System.out.println("Enter your user name:   ");
+        user=u.nextLine();
+        if(user.length()<30){
+        System.out.println("Your user is not valid it must exceed more than 50 characters");
+        }
+        else{
+        System.out.println("Your user is valid");
+        }
+        String password;
+        
+   
+        System.out.println("Enter your user Password:   ");
+        password=u.nextLine();
+        if(password.length()>=8 && (password.contains("!") || password.contains("?") || password.contains("@") || password.contains("#") || password.contains("$") || password.contains("%") || password.contains("^") || password.contains("&") || password.contains("*") || password.contains("(") || password.contains(")") || password.contains("-") || password.contains("_") || password.contains("=") || password.contains("+") || password.contains("?") || password.contains(".") || password.contains(">") || password.contains("<") || password.contains(",") || password.contains("/")) && (password.contains("1") || password.contains("2") || password.contains("3") || password.contains("4") || password.contains("5") || password.contains("6") || password.contains("7") || password.contains("8") || password.contains("9") || password.contains("0")) 
+        
+        && (password.contains("Q") || password.contains("W") || password.contains("E") || password.contains("R") || password.contains("Y") || password.contains("T") || password.contains("U") || password.contains("P") || password.contains("I") || password.contains("O") || password.contains("A") || password.contains("W") || password.contains("S") || password.contains("H") || password.contains("D") || password.contains("J") || password.contains("F") || password.contains("K") || password.contains("G") || password.contains("L") || password.contains("Z") || password.contains("X") || password.contains("E") || password.contains("C") || password.contains("V") || password.contains("B") || password.contains("q") || password.contains("N") || password.contains("w") || password.contains("M") || password.contains("e") || password.contains("i") || password.contains("r") || password.contains("o") || password.contains("t") || password.contains("p") || password.contains("y") || password.contains("a") || password.contains("u") || password.contains("s") || password.contains("d") || password.contains("k") || password.contains("f") || password.contains("l") || password.contains("g") || password.contains("z") || password.contains("h") || password.contains("x") || password.contains("j") || password.contains("c") || password.contains("v") || password.contains("b") || password.contains("n") || password.contains("m")))
+        {
+        System.out.println("Your password is valid");
+        }
+        else{
+        System.out.println("Your is  Invalid");
+    }
+    
+     String email;
+        
+   
+        System.out.println("Enter your user email:   ");
+        email=u.nextLine();
+        
+        if(email.contains("@")){
+        System.out.println("Your email is valid");
+        }
+        else{
+        System.out.println("Your is  Invalid");
+        }       
+}
+}
+
+
+
