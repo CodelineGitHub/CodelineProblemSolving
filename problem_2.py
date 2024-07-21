@@ -1,4 +1,3 @@
-
 def convertToBinary(n):
     if n > 1:
         convertToBinary(n // 2)
@@ -14,5 +13,6 @@ else:
     print("Output: ", end='')
     convertToBinary(dec)
     print()
-
+    
+# Keep the terminal window open
 input("\nPress Enter to exit...")
