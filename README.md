@@ -1,4 +1,4 @@
-## Submission Deadline: 2nd September 2024, 09:00 am
+## Submission Deadline: 3rd September 2024, 12:00 pm
 ## Submission Instructions
 
 To submit your solution for all 4 problems, please follow these steps:
